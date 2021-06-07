@@ -23,5 +23,6 @@ func greetingHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// HandlerFunc 是个 func(w IOWriter, r *Http.Request) 类型，   HandlerFunc(funcParam) 的语法，表示将 greetingHandler 强转成 HandlerFunc 类型
 	http.ListenAndServe(":5000", http.HandlerFunc(greetingHandler))
 }
